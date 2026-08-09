@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stone Paper Scissors Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🪨 Stone 📄 Paper ✂️ Scissors</h1>
+
+        <p class="subtitle">Choose your option and play!</p>
+
+        <!-- Score -->
+        <div class="score-board">
+
+            <div class="score">
+                <span id="user-score">0</span>
+                <p>You</p>
+            </div>
+
+            <div class="colon">:</div>
+
+            <div class="score">
+                <span id="computer-score">0</span>
+                <p>Computer</p>
+            </div>
+
+        </div>
+
+
+        <!-- Game Choices -->
+        <h2>Choose Your Option</h2>
+
+        <div class="choices">
+
+            <button class="choice" data-choice="stone">
+                <span class="emoji">🪨</span>
+                <span>Stone</span>
+            </button>
+
+            <button class="choice" data-choice="paper">
+                <span class="emoji">📄</span>
+                <span>Paper</span>
+            </button>
+
+            <button class="choice" data-choice="scissors">
+                <span class="emoji">✂️</span>
+                <span>Scissors</span>
+            </button>
+
+        </div>
+
+
+        <!-- Computer Choice -->
+        <div class="computer-box">
+
+            <h2>Computer Choice</h2>
+
+            <div id="computer-choice">
+                ❓
+            </div>
+
+        </div>
+
+
+        <!-- Result -->
+        <div class="result-box">
+
+            <h2 id="result">
+                Make your choice!
+            </h2>
+
+            <p id="moves">
+                You vs Computer
+            </p>
+
+        </div>
+
+
+        <!-- Reset Button -->
+        <button id="reset-btn">
+            🔄 Reset Game
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

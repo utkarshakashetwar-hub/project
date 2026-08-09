@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+
+    color: white;
+
+    padding: 20px;
+}
+
+
+/* Main Container */
+
+.game-container {
+    width: 100%;
+    max-width: 700px;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* Heading */
+
+h1 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #cccccc;
+
+    margin-bottom: 30px;
+}
+
+
+/* Score Board */
+
+.score-board {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-bottom: 35px;
+}
+
+.score {
+    min-width: 100px;
+}
+
+.score span {
+    font-size: 50px;
+
+    font-weight: bold;
+
+    color: #00e5ff;
+}
+
+.score p {
+    margin-top: 5px;
+
+    color: #dddddd;
+
+    font-size: 18px;
+}
+
+.colon {
+    font-size: 40px;
+
+    font-weight: bold;
+}
+
+
+/* Choose Heading */
+
+h2 {
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+
+/* Choice Buttons */
+
+.choices {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+}
+
+.choice {
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border: 2px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.choice:hover {
+    transform: translateY(-8px) scale(1.05);
+
+    background: #00a8cc;
+
+    border-color: #00e5ff;
+
+    box-shadow:
+        0 10px 25px rgba(0, 229, 255, 0.3);
+}
+
+.choice:active {
+    transform: scale(0.95);
+}
+
+.emoji {
+    font-size: 50px;
+}
+
+.choice span:last-child {
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* Computer Choice */
+
+.computer-box {
+    margin-top: 20px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.computer-box h2 {
+    color: #dddddd;
+
+    margin-bottom: 15px;
+}
+
+#computer-choice {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #00e5ff;
+
+    min-height: 40px;
+}
+
+
+/* Result */
+
+.result-box {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    min-height: 100px;
+}
+
+#result {
+    font-size: 30px;
+
+    color: #00e5ff;
+
+    margin-bottom: 10px;
+}
+
+#moves {
+    color: #dddddd;
+
+    font-size: 17px;
+}
+
+
+/* Result Colors */
+
+.win {
+    color: #2ed573 !important;
+}
+
+.lose {
+    color: #ff4757 !important;
+}
+
+.tie {
+    color: #ffa502 !important;
+}
+
+
+/* Reset Button */
+
+#reset-btn {
+    margin-top: 10px;
+
+    padding: 13px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #ff4757;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#reset-btn:hover {
+    background: #ff6b81;
+
+    transform: scale(1.05);
+}
+
+#reset-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .game-container {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .score-board {
+        gap: 20px;
+    }
+
+    .score span {
+        font-size: 40px;
+    }
+
+    .choice {
+        width: 100px;
+        height: 110px;
+    }
+
+    .emoji {
+        font-size: 35px;
+    }
+
+    .choice span:last-child {
+        font-size: 14px;
+    }
+
+    #result {
+        font-size: 24px;
+    }
+
+    #computer-choice {
+        font-size: 24px;
+    }
+}
